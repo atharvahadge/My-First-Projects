@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // let inp = document.getElementById("task");
+        // let txt = document.getElementById("text");
+
+        function addItem() {
+                if(document.getElementById("task").value == ""){
+                    alert("please enter your task...");
+                }
+                else{
+                    let newElement = document.createElement("li");
+                    newElement.innerHTML = `${document.getElementById("task").value}`;
+                    document.getElementById("text").appendChild(newElement);
+                    document.getElementById("task").value = "";
+                }
+        }
+    </script>
+</head>
+<body>
+    <h1> To do list </h1>
+    <input type="text" name="task" id="task">
+    <button onclick="addItem()"> Add Item</button>
+
+    <div>
+        <ul id="text">
+
+        </ul>
+    </div>
+
+
+</body>
+</html>

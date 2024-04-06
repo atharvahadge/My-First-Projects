@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> To Do List </title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">    
+
+    <script>
+        // let input = document.getElementById("todo");
+        // let text = document.getElementById("sidediv");
+        
+        function addItem() {
+            if(document.getElementById("todo").value == ""){
+                alert("please enter any task...");
+            }
+            else{
+                let newElement = document.createElement("li");
+                newElement.innerHTML = `${document.getElementById("todo").value}`;
+                document.getElementById("list1").appendChild(newElement);
+                document.getElementById("todo").value = "";
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    
+    <div id="outbox">
+
+        <div id="inbox">
+            <h1 id="dolist"> TO DO LIST </h1>
+            <input type="date" placeholder="Date" id="input2"> <br> <br>
+            <input type="text" placeholder="Enter Your Task" id="todo">     
+            <button id="btn" onclick="addItem()"> Add </button>  
+            <div id="lits"> 
+                <div id="sidediv">
+                    
+                    <ol id="list1">
+                        
+                    </ol>
+
+                   
+
+                </div>
+                
+                <div id="sidediv2">
+    
+                </div>
+            </div>
+            
+
+        </div>
+        
+        
+
+    </div>
+
+
+</body>
+</html>
